@@ -23,6 +23,12 @@ h1, p, .form{
     left: 50px;
     top: 100px;
 }
+h1{
+    width: fit-content;
+    background-image: linear-gradient(to right, #ab00fa, #f54272);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .form {
     margin-top: 60px;
 }
@@ -33,12 +39,13 @@ h1, p, .form{
     width: 460px;
     padding: 10px;
     padding-top: 0px;
+    box-sizing: border-box;
 }
 label {
     color:  ;
     font-size: 10px;
 }
-input, input:focus {
+input {
     font-family: 'Josefin Sans', sans-serif;
     display: block;
     border: none;
@@ -49,16 +56,42 @@ input, input:focus {
 .input:hover{
     border: 3px solid black;
 }
-#submit {
+.input:has(input:focus){
+    border: 3px solid #f54272;
+    animation-name: border-color;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+#submit,  #submit:has(input[value="Sign Up"]:active) {
     border: none;
 }
 input[value="Sign Up"]{
     color: white;
-    margin:auto;
+    margin: auto;
     border-radius: 10px;
     position: relative;
-    right: 10px;
-    width: 490px;
+    right: 1px;
+    width: 78px;
     padding: 10px;
     background-image: linear-gradient(to right, #ab00fa, #f54272);
+    transition: width 0.3s;
+    box-shadow: 0px 0px 10px #605e5f;
+}
+input[value="Sign Up"]:hover{
+    width: 446px;
+    transition: width 0.3s;
+}
+input[value="Sign Up"]:active{
+    box-shadow: none;
+}
+@keyframes border-color{
+    0%{
+        border: 3px solid #f54272;
+    }
+    50%{
+        border: 3px solid #ab00fa;
+    }
+    100%{
+        border: 3px solid #f54272;
+    }
 }
