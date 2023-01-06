@@ -18,11 +18,6 @@ body {
     height: 700px;
     box-shadow: 0px 0px 20px rgb(129, 100, 115);
 }
-h1 {
-    background: linear-gradient(to right, #ab00fa, #f54272);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 h1, p, .form{
     position: relative;
     left: 50px;
@@ -32,16 +27,38 @@ h1, p, .form{
     margin-top: 60px;
 }
 .input {
+    margin:10px;
     border: 3px solid rgb(184, 184, 184);
     border-radius: 10px;
-    width: 500px;
+    width: 460px;
     padding: 10px;
     padding-top: 0px;
 }
 label {
-    color: rgb(184, 184, 184);
+    color:  ;
     font-size: 10px;
 }
 input, input:focus {
+    font-family: 'Josefin Sans', sans-serif;
+    display: block;
     border: none;
+    outline: none;
+    margin: 0;
+    width: 100%;
+}
+.input:hover{
+    border: 3px solid black;
+}
+#submit {
+    border: none;
+}
+input[value="Sign Up"]{
+    color: white;
+    margin:auto;
+    border-radius: 10px;
+    position: relative;
+    right: 10px;
+    width: 490px;
+    padding: 10px;
+    background-image: linear-gradient(to right, #ab00fa, #f54272);
 }

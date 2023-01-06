@@ -15,11 +15,26 @@
         <p>Already have an account? <a href="#" class="link_sign_in">Sign in</a> here</p>
 
         <div class="form">
-            <div class="input" id="first_name">
+            <div class="input" id="first_name" for="firstname">
                 <label for="firstname">First Name</label><br/>
-                <input type="text" placeholder="John">
+                <input type="text" placeholder="John" id="firstname">
             </div>
-        </div>
+            <div class="input" id="last_name">
+                <label for="lastname">Last Name</label>
+                <input type="text" placeholder="Doe" id="lastname">
+            </div>
+            <div class="input" id="email">
+                <label for="email">Email</label>
+                <input type="email" placeholder="johndoe@mail.com" id="email">
+            </div>
+            <div class="input" id="password">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Minimum 8 characters">
+            </div>
+            <div class="input"id="submit">
+                <input type="submit" value="Sign Up">
+            </div>
+        
     </div>
 </body>
 
